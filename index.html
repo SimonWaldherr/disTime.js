@@ -1,0 +1,43 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>disTime.js</title>
+  <style>
+  
+  </style>
+  <script src="disTime.js" type="text/javascript"></script>
+  <script>
+    function random(min, max) {
+      return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
+    function generateExamples(config) {
+      var i = 0, time = new Date(), body = document.getElementsByTagName('body')[0], examples = '', timestamp;
+      
+      i = 0;
+      console.log(config);
+      while(i < 23) {
+        timestamp = parseInt(time.getTime()/1000-i*(100+random(0,42)));
+        examples += '<p class="distime" data-time="'+timestamp+'">'+timestamp+'</p>';
+        i++;
+      }
+      body.innerHTML += '<p class="distime" data-time="'+parseInt(time.getTime()/1000-parseInt(eval(config['time']), 10), 10)+'">'+parseInt(time.getTime()/1000-parseInt(eval(config['time']), 10), 10)+'</p>'+examples;
+    }
+    function init() {
+      var config = {'lang' : 'en', 'time' : '60*60*24', 'detail' : 0},
+      hash = window.location.hash.replace('#', '').split('&');
+      
+      for(i = 0; i < hash.length; i++) {
+        config[hash[i].split('=')[0]] = hash[i].split('=')[1];
+      }
+      
+      generateExamples(config);
+      //disTime(<?php echo time(); ?>-parseInt(Date.now()/1000),config['lang'],parseInt(config['detail'],10));
+      disTime(0,config['lang'],parseInt(config['detail'],10));
+    }
+  </script>
+</head>
+<body onload="javascript:init();">
+  <p class="distime" data-time="613112400">613112400</p>
+  <p class="distime" data-time="1363410000">1363410000</p>
+</body>
+</html>
