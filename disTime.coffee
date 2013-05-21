@@ -1,6 +1,6 @@
 # * * * * * * * * * *
 # *   disTime .js   *
-# *  Version   0.2  *
+# *  Version   0.3  *
 # *  License:  MIT  *
 # * Simon  Waldherr *
 # * * * * * * * * * *
@@ -19,6 +19,7 @@ disTime = (timedifference, language, detailed) ->
     en: ["", " ago", " and ", " second ", " seconds ", " minute ", " minutes ", " hour ", " hours ", " day ", " days ", " week ", " weeks ", " month ", " months ", " year ", " years "]
     de: ["vor ", "", " und ", " Sekunde ", " Sekunden ", " Minute ", " Minuten ", " Stunde ", " Stunden ", " Tag ", " Tage ", " Woche ", " Wochen ", " Monat ", " Monate ", " Jahr ", " Jahre "]
     it: ["", " fa", " e ", " secondo ", " secondi ", " minuto ", " minuti ", " ora ", " ore ", " giorno ", " giorni ", " settimana ", " settimane ", " mese ", " mesi ", " anno ", " anni "]
+    es: [" ", "antes", " y ", " segundo ", " segundos ", " minuto ", " minutos ", " hora ", " horas ", " d&#237;a ", " d&#237;as ", " semana ", " semanas ", " mes ", " meses ", " a&#241;o ", " a&#241;os "]
 
   timestamp = parseInt(Date.now() / 1000, 10) + timedifference
   elements = document.getElementsByClassName("distime")

@@ -11,13 +11,12 @@
       return Math.floor(Math.random() * (max - min + 1)) + min;
     }
     function init() {
-      var config = {'lang' : 'en', 'time' : '60*60*24', 'detail' : 0},
+      var config, userLang = (navigator.language) ? navigator.language : navigator.userLanguage;
+      config = {'lang' : userLang, 'time' : '60*60*24', 'detail' : 1},
       hash = window.location.hash.replace('#', '').split('&');
-      
       for(i = 0; i < hash.length; i++) {
         config[hash[i].split('=')[0]] = hash[i].split('=')[1];
       }
-      
       disTime(<?php echo time(); ?>-parseInt(Date.now()/1000),config['lang'],parseInt(config['detail'],10));
       //disTime(0,config['lang'],parseInt(config['detail'],10));
     }
