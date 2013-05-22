@@ -1,6 +1,6 @@
 # * * * * * * * * * *
 # *   disTime .js   *
-# *  Version   0.4  *
+# *  Version   0.5  *
 # *  License:  MIT  *
 # * Simon  Waldherr *
 # * * * * * * * * * *
@@ -21,6 +21,7 @@ disTime = (timedifference, language, detailed) ->
     it: ["", " fa", " e ", " secondo ", " secondi ", " minuto ", " minuti ", " ora ", " ore ", " giorno ", " giorni ", " settimana ", " settimane ", " mese ", " mesi ", " anno ", " anni "]
     es: [" ", "antes", " y ", " segundo ", " segundos ", " minuto ", " minutos ", " hora ", " horas ", " d&#237;a ", " d&#237;as ", " semana ", " semanas ", " mes ", " meses ", " a&#241;o ", " a&#241;os "]
     fr: ["il ya ", "", " et ", " seconde ", " secondes ", " minute ", " minutes ", " heure ", " heures ", " jour ", " jours ", " semaine ", " semaines ", " mois ", " mois ", " an ", " ans "]
+    pt: [" ", " atr&#225;s", " e ", " segundo ", " segundos ", " minuto ", " minutos ", " hora ", " horas ", " dia ", " dias ", " semana ", " semanas ", " m&#234;s ", " meses ", " ano ", " anos "]
 
   detailed = false  if detailed is `undefined`
   language = "en"  if words[language] is `undefined`
