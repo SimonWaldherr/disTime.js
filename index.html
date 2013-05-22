@@ -22,7 +22,7 @@
     }
     function init() {
       var config, userLang = (navigator.language) ? navigator.language : navigator.userLanguage;
-      config = {'lang' : userLang, 'time' : '60*60*24', 'detail' : 1},
+      config = {'lang' : userLang, 'time' : '60*60*24', 'detail' : false},
       hash = window.location.hash.replace('#', '').split('&');
       for(i = 0; i < hash.length; i++) {
         config[hash[i].split('=')[0]] = hash[i].split('=')[1];
