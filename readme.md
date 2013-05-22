@@ -5,7 +5,7 @@ converts UNIX-Timestamps to strings like " 5 days ago " in six languages (en, de
 ##about
 
 License: MIT  
-Version: 0.3  
+Version: 0.5  
 Date: 5.2013  
 
 ##demo
