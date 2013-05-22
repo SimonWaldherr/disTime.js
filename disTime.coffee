@@ -1,6 +1,6 @@
 # * * * * * * * * * *
 # *   disTime .js   *
-# *  Version   0.5  *
+# *  Version   0.6  *
 # *  License:  MIT  *
 # * Simon  Waldherr *
 # * * * * * * * * * *
@@ -24,7 +24,12 @@ disTime = (timedifference, language, detailed) ->
     pt: [" ", " atr&#225;s", " e ", " segundo ", " segundos ", " minuto ", " minutos ", " hora ", " horas ", " dia ", " dias ", " semana ", " semanas ", " m&#234;s ", " meses ", " ano ", " anos "]
 
   detailed = false  if detailed is `undefined`
-  language = "en"  if words[language] is `undefined`
+  language = (if (navigator.language) then navigator.language else navigator.userLanguage)  if language is `undefined`
+  if words[language] is `undefined`
+    if words[language.split("-")[0]] isnt `undefined`
+      language = language.split("-")[0]
+    else
+      language = "en"
   timestamp = parseInt(Date.now() / 1000, 10) + timedifference
   elements = document.getElementsByClassName("distime")
   elementcount = elements.length

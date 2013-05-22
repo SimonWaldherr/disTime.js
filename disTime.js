@@ -1,6 +1,6 @@
 /* * * * * * * * * *
  *   disTime .js   *
- *  Version   0.5  *
+ *  Version   0.6  *
  *  License:  MIT  *
  * Simon  Waldherr *
  * * * * * * * * * */
@@ -24,8 +24,15 @@ function disTime(timedifference, language, detailed) {
   if (detailed === undefined) {
     detailed = false;
   }
+  if (language === undefined) {
+    language = (navigator.language) ? navigator.language : navigator.userLanguage;
+  }
   if (words[language] === undefined) {
-    language = 'en';
+    if (words[language.split('-')[0]] !== undefined) {
+      language = language.split('-')[0];
+    } else {
+      language = 'en';
+    }
   }
 
   timestamp = parseInt(Date.now() / 1000, 10) + timedifference;
