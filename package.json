@@ -1,6 +1,6 @@
 {
   "name": "distime",
-  "version": "0.6",
+  "version": "0.6.0",
   "author": {
     "name": "Simon Waldherr",
     "email": "contact@simonwaldherr.de",
@@ -20,7 +20,11 @@
       "name": "Simon Waldherr",
       "email": "contact@simonwaldherr.de",
       "url": "http://simon.waldherr.eu/"
-    } 
+    },
+    {
+      "name": "Tárcio Zemel",
+      "url": "http://about.me/tarciozemel"
+    }
   ],
   "demos": [
     "./index.html"
