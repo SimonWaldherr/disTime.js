@@ -1,24 +1,17 @@
 {
-  "name": "distime",
-  "version": "0.6.0",
   "author": {
-    "name": "Simon Waldherr",
     "email": "contact@simonwaldherr.de",
+    "name": "Simon Waldherr",
     "url": "http://simon.waldherr.eu/"
   },
-  "description": "converts UNIX-Timestamps to strings like '5 days ago' in six languages",
-  "homepage": "https://github.com/shownotes/disTime.js",
-  "maintainers": [
+  "bugs": {
+    "email": "contact@simonwaldherr.de",
+    "url": "https://github.com/shownotes/disTime.js/issues"
+  },
+  "contributors": [
     {
-      "name": "Simon Waldherr",
       "email": "contact@simonwaldherr.de",
-      "web": "http://simon.waldherr.eu/"
-    }
-  ],
-  "contributors": [ 
-    {
       "name": "Simon Waldherr",
-      "email": "contact@simonwaldherr.de",
       "url": "http://simon.waldherr.eu/"
     },
     {
@@ -29,22 +22,35 @@
   "demos": [
     "./index.html"
   ],
+  "description": "converts UNIX-Timestamps to strings like '5 days ago' in six languages",
+  "homepage": "https://github.com/shownotes/disTime.js",
+  "keywords": [
+    "time",
+    "date",
+    "dates",
+    "times",
+    "language",
+    "ago",
+    "english",
+    "german",
+    "french",
+    "italian",
+    "portuguese",
+    "spanish"
+  ],
+  "license": "MIT",
+  "main": "disTime.js",
+  "maintainers": [
+    {
+      "email": "contact@simonwaldherr.de",
+      "name": "Simon Waldherr",
+      "web": "http://simon.waldherr.eu/"
+    }
+  ],
+  "name": "distime",
   "repository": {
     "type": "git",
     "url": "https://github.com/shownotes/disTime.js.git"
   },
-  "bugs": {
-    "url": "https://github.com/shownotes/disTime.js/issues",
-    "email": "contact@simonwaldherr.de"
-  },
-  "main": "disTime.js",
-  "keywords": [
-    "time", 
-    "date", 
-    "dates", 
-    "times", 
-    "language", 
-    "ago"
-  ],
-  "license": "MIT"
+  "version": "0.6.1"
 }
