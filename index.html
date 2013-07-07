@@ -29,7 +29,7 @@
     }
     function init() {
       var config, userLang = (navigator.language) ? navigator.language : navigator.userLanguage;
-      config = {'lang' : userLang, 'time' : '60*60*24', 'detail' : false},
+      config = {'lang' : userLang, 'time' : '60*60*24', 'detail' : 1},
       hash = window.location.hash.replace('#', '').split('&');
       for(i = 0; i < hash.length; i++) {
         config[hash[i].split('=')[0]] = hash[i].split('=')[1];
@@ -60,14 +60,20 @@
         <option>es</option>
         <option>fr</option>
         <option>pt</option>
+        <option>int</option>
       </optgroup>
     </select>
     Details:
     <select id="detail" name="detail" size="1" onchange="changeDemo()">
-      <option>off</option>
       <option>on</option>
+      <option>off</option>
     </select>
   </div><div id="examples">
+    <p class="distime" data-time="1563410000">1563410000</p>
+    <p class="distime" data-time="1503410000">1503410000</p>
+    <p class="distime" data-time="1473410000">1473410000</p>
+    <p class="distime" data-time="1443410000">1443410000</p>
+    <p class="distime" data-time="1413410000">1413410000</p>
     <p class="distime" data-time="613112400">613112400</p>
     <p class="distime" data-time="1363410000">1363410000</p>
   </div>

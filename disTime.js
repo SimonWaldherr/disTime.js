@@ -1,31 +1,57 @@
 /* * * * * * * * * *
  *   disTime .js   *
- *  Version   0.6  *
+ *  Version 0.7.0  *
  *  License:  MIT  *
  * Simon  Waldherr *
  * * * * * * * * * */
 
-/*jslint browser: true, white: true, indent: 2 */
+/*jslint browser: true, indent: 2 */
 /*exported disTime */
 
-var disTimeRepeater;
-
-function disTime(timedifference, language, detailed) {
+var disTimeRepeater, disTime;
+disTime = function (timedifference, language, detailed) {
   "use strict";
-  var elements, elementcount, smallest, i, timestamp, elementtime, distime, insert,
+  var elements,
+    elementcount,
+    smallest,
+    i,
+    timestamp,
+    elementtime,
+    distime,
+    insert,
     words = {
-      'en': ['', ' ago', ' and ', ' second ', ' seconds ', ' minute ', ' minutes ', ' hour ', ' hours ', ' day ', ' days ', ' week ', ' weeks ', ' month ', ' months ', ' year ', ' years '],
-      'de': ['vor ', '', ' und ', ' Sekunde ', ' Sekunden ', ' Minute ', ' Minuten ', ' Stunde ', ' Stunden ', ' Tag ', ' Tagen ', ' Woche ', ' Wochen ', ' Monat ', ' Monaten ', ' Jahr ', ' Jahren '],
-      'it': ['', ' fa', ' e ', ' secondo ', ' secondi ', ' minuto ', ' minuti ', ' ora ', ' ore ', ' giorno ', ' giorni ', ' settimana ', ' settimane ', ' mese ', ' mesi ', ' anno ', ' anni '],
-      'es': [' ', 'antes', ' y ', ' segundo ', ' segundos ', ' minuto ', ' minutos ', ' hora ', ' horas ', ' d&#237;a ', ' d&#237;as ', ' semana ', ' semanas ', ' mes ', ' meses ', ' a&#241;o ', ' a&#241;os '],
-      'fr': ['il ya ', '', ' et ', ' seconde ', ' secondes ', ' minute ', ' minutes ', ' heure ', ' heures ', ' jour ', ' jours ', ' semaine ', ' semaines ', ' mois ', ' mois ', ' an ', ' ans '],
-      'pt': [' ', ' atr&#225;s', ' e ', ' segundo ', ' segundos ', ' minuto ', ' minutos ', ' hora ', ' horas ', ' dia ', ' dias ', ' semana ', ' semanas ', ' m&#234;s ', ' meses ', ' ano ', ' anos ']
+      'int': ['', ' ago', ' ', ' s ', ' s ', ' m ', ' m ', ' h ', ' h ', ' d ', ' d ', ' w ', ' w ', ' m ', ' m ', ' y ', ' y ', 'in '],
+      'en': ['', ' ago', ' and ', ' second ', ' seconds ', ' minute ', ' minutes ', ' hour ', ' hours ', ' day ', ' days ', ' week ', ' weeks ', ' month ', ' months ', ' year ', ' years ', 'in '],
+      'de': ['vor ', '', ' und ', ' Sekunde ', ' Sekunden ', ' Minute ', ' Minuten ', ' Stunde ', ' Stunden ', ' Tag ', ' Tagen ', ' Woche ', ' Wochen ', ' Monat ', ' Monaten ', ' Jahr ', ' Jahren ', 'in '],
+      'it': ['', ' fa', ' e ', ' secondo ', ' secondi ', ' minuto ', ' minuti ', ' ora ', ' ore ', ' giorno ', ' giorni ', ' settimana ', ' settimane ', ' mese ', ' mesi ', ' anno ', ' anni ', 'in '],
+      'es': [' ', 'antes', ' y ', ' segundo ', ' segundos ', ' minuto ', ' minutos ', ' hora ', ' horas ', ' d&#237;a ', ' d&#237;as ', ' semana ', ' semanas ', ' mes ', ' meses ', ' a&#241;o ', ' a&#241;os ', 'en '],
+      'fr': ['il ya ', '', ' et ', ' seconde ', ' secondes ', ' minute ', ' minutes ', ' heure ', ' heures ', ' jour ', ' jours ', ' semaine ', ' semaines ', ' mois ', ' mois ', ' an ', ' ans ', 'en '],
+      'pt': [' ', ' atr&#225;s', ' e ', ' segundo ', ' segundos ', ' minuto ', ' minutos ', ' hora ', ' horas ', ' dia ', ' dias ', ' semana ', ' semanas ', ' m&#234;s ', ' meses ', ' ano ', ' anos ', 'em ']
     };
+    //  0 - pre ago (de, fr) (past)
+    //  1 - post ago (en, it, es, pt) (past)
+    //  2 - and
+    //  3 - one second
+    //  4 - multiple seconds
+    //  5 - one minute
+    //  6 - multiple minutes
+    //  7 - one hour
+    //  8 - multiple hours
+    //  9 - one day
+    // 10 - multiple days
+    // 11 - one week
+    // 12 - multiple weeks
+    // 13 - one month
+    // 14 - multiple months
+    // 15 - one year
+    // 16 - multiple years
+    // 17 - in (future)
+
   if (detailed === undefined) {
     detailed = false;
   }
   if (language === undefined) {
-    language = (navigator.language) ? navigator.language : navigator.userLanguage;
+    language =  navigator.language || navigator.userLanguage;
   }
   if (words[language] === undefined) {
     if (words[language.split('-')[0]] !== undefined) {
@@ -41,10 +67,14 @@ function disTime(timedifference, language, detailed) {
   smallest = timestamp;
   for (i = 0; i < elementcount; i += 1) {
     elementtime = elements[i].getAttribute("data-time");
-    distime = timestamp - elementtime;
+    distime = (timestamp > elementtime) ? timestamp - elementtime : elementtime - timestamp;
 
     if ((typeof distime === 'number') && (parseInt(distime, 10) === distime)) {
-      insert = words[language][0];
+      if (timestamp > elementtime) {
+        insert = words[language][0];
+      } else {
+        insert = words[language][17];
+      }
 
       if (distime > 31536000) {
         //years
@@ -126,7 +156,9 @@ function disTime(timedifference, language, detailed) {
         }
       }
 
-      insert += words[language][1];
+      if (timestamp > elementtime) {
+        insert += words[language][1];
+      }
       elements[i].innerHTML = insert;
 
       if (distime < smallest) {
@@ -144,4 +176,4 @@ function disTime(timedifference, language, detailed) {
   } else {
     disTimeRepeater = setTimeout(disTime, 86400001, timedifference, language, detailed);
   }
-}
+};
