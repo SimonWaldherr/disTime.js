@@ -1,6 +1,6 @@
 /* * * * * * * * * *
  *   disTime .js   *
- *  Version 0.7.0  *
+ *  Version 0.7.1  *
  *  License:  MIT  *
  * Simon  Waldherr *
  * * * * * * * * * */
@@ -88,6 +88,9 @@ disTime = function (timedifference, language, detailed) {
 
       if (((distime < 60 * 60 * 24 * 365) && (distime > 60 * 60 * 24 * 7 * 4)) || ((distime > 60 * 60 * 24 * 365) && detailed && (parseInt(distime % 31536000 / 2419200, 10) !== 0))) {
         //months
+        if (detailed && insert !== words[language][0] && insert !== words[language][17]) {
+          insert += words[language][2];
+        }
         insert += parseInt(distime % 31536000 / 2419200, 10);
         if (parseInt(distime % 31536000 / 2419200, 10) === 1) {
           insert += words[language][13];
@@ -97,6 +100,9 @@ disTime = function (timedifference, language, detailed) {
 
         if (((distime < 60 * 60 * 24 * 365) && detailed && (parseInt(distime % 2419200 / 86400, 10) !== 0))) {
           //days
+          if (detailed && insert !== words[language][0] && insert !== words[language][17]) {
+            insert += words[language][2];
+          }
           insert += parseInt(distime % 2419200 / 86400, 10);
           if (parseInt(distime % 2419200 / 86400, 10) === 1) {
             insert += words[language][9];
@@ -108,6 +114,9 @@ disTime = function (timedifference, language, detailed) {
 
       if (((distime < 60 * 60 * 24 * 7 * 4) && (distime > 60 * 60 * 24 * 7)) || ((distime < 10368000) && (distime > 2419199) && detailed && (parseInt(distime % 2592000 / 2419200, 10) !== 0))) {
         //weeks
+        if (detailed && insert !== words[language][0] && insert !== words[language][17]) {
+          insert += words[language][2];
+        }
         insert += parseInt(distime % 2419200 / 604800, 10);
         if (parseInt(distime % 2419200 / 604800, 10) === 1) {
           insert += words[language][11];
@@ -118,6 +127,9 @@ disTime = function (timedifference, language, detailed) {
 
       if (((distime < 60 * 60 * 24 * 7) && (distime > 86399)) || ((distime < 2419200) && (distime > 604799) && detailed && (parseInt(distime % 604800 / 86400, 10) !== 0))) {
         //days
+        if (detailed && insert !== words[language][0] && insert !== words[language][17]) {
+          insert += words[language][2];
+        }
         insert += parseInt(distime % 604800 / 86400, 10);
         if (parseInt(distime % 604800 / 86400, 10) === 1) {
           insert += words[language][9];
@@ -128,6 +140,9 @@ disTime = function (timedifference, language, detailed) {
 
       if (((distime < 86400) && (distime > 3599)) || ((distime < 604800) && (distime > 86399) && detailed && (parseInt(distime % 86400 / 3600, 10) !== 0))) {
         //hours
+        if (detailed && insert !== words[language][0] && insert !== words[language][17]) {
+          insert += words[language][2];
+        }
         insert += parseInt(distime % 86400 / 3600, 10);
         if (parseInt(distime % 86400 / 3600, 10) === 1) {
           insert += words[language][7];
@@ -138,6 +153,9 @@ disTime = function (timedifference, language, detailed) {
 
       if (((distime < 3600) && (distime > 59)) || ((distime < 86400) && (distime > 3599) && detailed && (parseInt(distime % 3600 / 60, 10) !== 0))) {
         //minutes
+        if (detailed && insert !== words[language][0] && insert !== words[language][17]) {
+          insert += words[language][2];
+        }
         insert += parseInt(distime % 3600 / 60, 10);
         if (parseInt(distime % 3600 / 60, 10) === 1) {
           insert += words[language][5];
@@ -148,6 +166,9 @@ disTime = function (timedifference, language, detailed) {
 
       if ((distime < 60) || ((distime < 3600) && (distime > 59) && detailed && (distime % 60 !== 0))) {
         //seconds
+        if (detailed && insert !== words[language][0] && insert !== words[language][17]) {
+          insert += words[language][2];
+        }
         insert += distime % 60;
         if (distime % 60 === 1) {
           insert += words[language][3];

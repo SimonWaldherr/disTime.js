@@ -4,9 +4,9 @@ converts UNIX-Timestamps to strings like " 5 days ago " in six languages (en, de
 
 ##about
 
-License: MIT  
-Version: 0.7  
-Date: 7.2013  
+License:   MIT  
+Version: 0.7.1  
+Date:  07.2013  
 
 ##demo
 
