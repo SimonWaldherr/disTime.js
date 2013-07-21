@@ -23,6 +23,13 @@
     "./index.html"
   ],
   "description": "converts UNIX-Timestamps to strings like '5 days ago' in six languages",
+  "devDependencies": {
+    "grunt": ">= 0.4.1",
+    "grunt-compare-size": ">= 0.0.0",
+    "grunt-contrib-jshint": ">= 0.6.0",
+    "grunt-contrib-uglify": ">= 0.2.2",
+    "gzip-js": ">= 0.3.1"
+  },
   "homepage": "https://github.com/shownotes/disTime.js",
   "keywords": [
     "time",
