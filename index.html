@@ -14,37 +14,58 @@
   </style>
   <script src="disTime.js" type="text/javascript"></script>
   <script>
-    function random(min, max) {
-      return Math.floor(Math.random() * (max - min + 1)) + min;
-    }
-    function generateExamples(config) {
-      var i = 0, time = new Date(), examplesElement = document.getElementById('examples'), examples = '', timestamp;
-      i = 0;
-      while(i < 23) {
-        timestamp = parseInt(time.getTime()/1000-i*(100+random(0,42)));
-        examples += '<p class="distime" data-time="'+timestamp+'">'+timestamp+'</p>';
-        i++;
-      }
-      examplesElement.innerHTML += '<p class="distime" data-time="'+parseInt(time.getTime()/1000-parseInt(eval(config['time']), 10), 10)+'">'+parseInt(time.getTime()/1000-parseInt(eval(config['time']), 10), 10)+'</p>'+examples;
-    }
-    function init() {
-      var config, userLang = (navigator.language) ? navigator.language : navigator.userLanguage;
-      config = {'lang' : userLang, 'time' : '60*60*24', 'detail' : 1},
-      hash = window.location.hash.replace('#', '').split('&');
-      for(i = 0; i < hash.length; i++) {
-        config[hash[i].split('=')[0]] = hash[i].split('=')[1];
-      }
-      generateExamples(config);
-      //disTime(<?php echo time(); ?>-parseInt(Date.now()/1000),config['lang'],parseInt(config['detail'],10));
-      disTime(0,config['lang'],parseInt(config['detail'],10));
-    }
-    function changeDemo() {
-      var lang, detail;
-      lang = document.getElementById('lang').value;
-      detail = document.getElementById('detail').value === 'on' ? true : false;
-      window.clearTimeout(disTimeRepeater);
-      disTime(0,lang,detail);
-    }
+
+/*global disTime, disTimeRepeater */
+/*jslint browser: true, indent: 2 */
+function random(min, max) {
+  "use strict";
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+function generateExamples(config) {
+  "use strict";
+  var i,
+    time = new Date(),
+    examplesElement = document.getElementById('examples'),
+    examples = '',
+    timestamp;
+
+  i = random(-10, 0);
+  while (i < 15) {
+    timestamp = parseInt(time.getTime() / 1000 - i * (100 + random(0, 42)), 10);
+    examples += '<p class="distime" data-time="' + timestamp + '">' + timestamp + '</p>';
+    i += 1;
+  }
+  examplesElement.innerHTML += '<p class="distime" data-time="' + parseInt(time.getTime() / 1000 - parseInt(eval(config.time), 10), 10) + '">' + parseInt(time.getTime() / 1000 - parseInt(eval(config.time), 10), 10) + '</p>' + examples;
+}
+
+function init() {
+  "use strict";
+  var config,
+    hash,
+    i,
+    userLang = navigator.language || navigator.userLanguage;
+
+  config = {'lang' : userLang, 'time' : '60*60*24', 'detail' : 1};
+  hash = window.location.hash.replace('#', '').split('&');
+  for (i = 0; i < hash.length; i += 1) {
+    config[hash[i].split('=')[0]] = hash[i].split('=')[1];
+  }
+  generateExamples(config);
+  //disTime(<?php echo time(); ?>-parseInt(Date.now()/1000),config.lang,parseInt(config.detail,10));
+  disTime(0, config.lang, parseInt(config.detail, 10));
+}
+
+function changeDemo() {
+  "use strict";
+  var lang,
+    detail;
+  lang = document.getElementById('lang').value;
+  detail = document.getElementById('detail').value === 'on' ? true : false;
+  window.clearTimeout(disTimeRepeater);
+  disTime(0, lang, detail);
+}
+
   </script>
 </head>
 <body onload="javascript:init();">
