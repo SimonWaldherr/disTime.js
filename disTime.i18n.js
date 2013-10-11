@@ -55,58 +55,78 @@ languages = {
     },
     'de': {
         words: {
-            'preAgo': '',
-            'postAgo': 'ago',
-            'and': 'and',
+            'preAgo': 'vor',
+            'postAgo': '',
+            'and': 'und',
             'inFuture': 'in'
         },
-        year: [],
-        month: [],
-        week: [],
-        day: ['Tag', 'Tagen'],
+        year: ['Jahr', 'Jahren', 'Jahren'],
+        month: ['Monat', 'Monaten', 'Monaten'],
+        week: ['Woche', 'Wochen', 'Wochen'],
+        day: ['Tag', 'Tagen', 'Tagen'],
         hour: ['Stunde', 'Stunden', 'Stunden'],
         minute: ['Minute', 'Minuten', 'Minuten'],
         second: ['Sekunde', 'Sekunden', 'Sekunden']
     },
     'it': {
-        words: [],
-        year: [],
-        month: [],
-        week: [],
-        day: [],
-        hour: [],
-        minute: [],
-        second: []
+        words: {
+            'preAgo': '',
+            'postAgo': 'fa',
+            'and': 'e',
+            'inFuture': 'in'
+        },
+        year: ['anno', 'anni'],
+        month: ['mese', 'mesi'],
+        week: ['settimana', 'settimane'],
+        day: ['giorno', 'giorni'],
+        hour: ['ora', 'ore'],
+        minute: ['minuto', 'minuti'],
+        second: ['secondo', 'secondi']
     },
     'es': {
-        words: [],
-        year: [],
-        month: [],
-        week: [],
-        day: [],
-        hour: [],
-        minute: [],
-        second: []
+        words: {
+            'preAgo': '',
+            'postAgo': 'antes',
+            'and': 'y',
+            'inFuture': 'en'
+        },
+        year: ['a&#241;o', 'a&#241;os'],
+        month: ['mes', 'meses'],
+        week: ['semana', 'semanas'],
+        day: ['d&#237;a ', 'd&#237;as'],
+        hour: ['hora', 'horas'],
+        minute: ['minuto', 'minutos'],
+        second: ['segundo', 'segundos']
     },
     'fr': {
-        words: [],
-        year: [],
-        month: [],
-        week: [],
-        day: [],
-        hour: [],
-        minute: [],
-        second: []
+        words: {
+            'preAgo': 'il ya',
+            'postAgo': '',
+            'and': 'et',
+            'inFuture': 'en '
+        },
+        year: ['an', 'ans'],
+        month: ['mois', 'mois'],
+        week: ['semaine', 'semaines'],
+        day: ['jour', 'jours'],
+        hour: ['heure', 'heures'],
+        minute: ['minute', 'minutes'],
+        second: ['seconde', 'secondes']
     },
     'pt': {
-        words: [],
-        year: [],
-        month: [],
-        week: [],
-        day: [],
-        hour: [],
-        minute: [],
-        second: []
+        words: {
+            'preAgo': '',
+            'postAgo': 'atr&#225;s',
+            'and': 'e',
+            'inFuture': 'em'
+        },
+        year: ['ano', 'anos'],
+        month: ['m&#234;s', 'meses'],
+        week: ['semana', 'semanas'],
+        day: ['dia', 'dias'],
+        hour: ['hora', 'horas'],
+        minute: ['minuto', 'minutos'],
+        second: ['segundo','segundos']
     },
     'ru': {
         words: {
@@ -123,12 +143,4 @@ languages = {
         minute: ['минута','минуты','минут'],
         second: ['секунду', 'секунды', 'секунд']
     }
-}
-
-/**
- 'de': ['vor ', '', ' und ', ' Sekunde ', ' Sekunden ', ' Minute ', ' Minuten ', ' Stunde ', ' Stunden ', ' Tag ', ' Tagen ', ' Woche ', ' Wochen ', ' Monat ', ' Monaten ', ' Jahr ', ' Jahren ', 'in '],
- 'it': ['', ' fa', ' e ', ' secondo ', ' secondi ', ' minuto ', ' minuti ', ' ora ', ' ore ', ' giorno ', ' giorni ', ' settimana ', ' settimane ', ' mese ', ' mesi ', ' anno ', ' anni ', 'in '],
- 'es': [' ', 'antes', ' y ', ' segundo ', ' segundos ', ' minuto ', ' minutos ', ' hora ', ' horas ', ' d&#237;a ', ' d&#237;as ', ' semana ', ' semanas ', ' mes ', ' meses ', ' a&#241;o ', ' a&#241;os ', 'en '],
- 'fr': ['il ya ', '', ' et ', ' seconde ', ' secondes ', ' minute ', ' minutes ', ' heure ', ' heures ', ' jour ', ' jours ', ' semaine ', ' semaines ', ' mois ', ' mois ', ' an ', ' ans ', 'en '],
- 'pt': [' ', ' atr&#225;s', ' e ', ' segundo ', ' segundos ', ' minuto ', ' minutos ', ' hora ', ' horas ', ' dia ', ' dias ', ' semana ', ' semanas ', ' m&#234;s ', ' meses ', ' ano ', ' anos ', 'em ']
-*/
+};
