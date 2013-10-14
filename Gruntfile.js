@@ -3,7 +3,7 @@ module.exports = function(grunt) {
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
     compare_size: {
-      files: [ "./disTime.js", "./disTime.min.js" ],
+      files: ['./disTime.js', './disTime.i18n.js', './disTime.min.js'],
       options: {
         compress: {
           gz: function( contents ) {
@@ -17,7 +17,7 @@ module.exports = function(grunt) {
       options: {
         banner: '/* * * * * * * * * *\n' +
                 ' *   disTime .js   *\n' +
-                ' *  Version 0.7.2  *\n' +
+                ' *  Version 0.7.4  *\n' +
                 ' *  License:  MIT  *\n' +
                 ' * Simon  Waldherr *\n' +
                 ' * * * * * * * * * */\n\n',
@@ -25,7 +25,7 @@ module.exports = function(grunt) {
       },
       dist: {
         files: {
-          './disTime.min.js': ['./disTime.js']
+          './disTime.min.js': ['./disTime.i18n.js', './disTime.js']
         }
       }
     },
@@ -40,7 +40,7 @@ module.exports = function(grunt) {
       }
     }
   });
-  grunt.loadNpmTasks("grunt-compare-size");
+  grunt.loadNpmTasks('grunt-compare-size');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.registerTask('default', ['uglify', 'compare_size']);
 };
