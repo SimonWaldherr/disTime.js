@@ -1,15 +1,17 @@
 /* * * * * * * * * *
  *   disTime .js   *
- *  Version 0.7.4  *
+ *  Version 0.7.5  *
  *  License:  MIT  *
  * Simon  Waldherr *
  * * * * * * * * * */
 
-/*jslint browser: true, indent: 2 */
+/*jslint browser: true, indent: 2, plusplus: true */
 
-function trim11 (str) {
+function trim11(str) {
+  "use strict";
+  var i;
   str = str.replace(/^\s+/, '');
-  for (var i = str.length - 1; i >= 0; i--) {
+  for (i = str.length - 1; i >= 0; i--) {
     if (/\S/.test(str.charAt(i))) {
       str = str.substring(0, i + 1);
       break;
@@ -18,32 +20,43 @@ function trim11 (str) {
   return str;
 }
 
-function checkForAnd (detailed, insert, language) {
+function checkForAnd(detailed, insert, language) {
+  "use strict";
   if (detailed && trim11(insert) !== language.words.preAgo && trim11(insert) !== language.words.inFuture) {
     return ' ' + language.words.and + ' ';
   }
-  return ''
+  return '';
 }
 
-languages = {
-  'declOfNum': function (number, titles) {
-    cases = [2, 0, 1, 1, 1, 2];
-    return titles[ (number%100>4 && number%100<20)? 2 : cases[(number%10<5)?number%10:5] ];
+var languages = {
+  'declOfNum': function (mode, number, titles) {
+    "use strict";
+    var cases;
+    if (mode === 2) {
+      cases = [2, 0, 1, 1, 1, 2];
+    } else {
+      if (number === 1) {
+        return titles[0];
+      }
+      return titles[1];
+    }
+    return titles[(number % 100 > 4 && number % 100 < 20) ? 2 : cases[(number % 10 < 5) ? number % 10 : 5]];
   },
   'int': {
     words: {
       'preAgo': '',
       'postAgo': 'ago',
-      'and': 'and',
+      'and': ' ',
       'inFuture': 'in'
     },
-    year: [''],
-    month: [],
-    week: [],
-    day: [],
-    hour: [],
-    minute: [],
-    second: []
+    mode: 1,
+    year: ['Y', 'Y'],
+    month: ['M', 'M'],
+    week: ['W', 'W'],
+    day: ['D', 'D'],
+    hour: ['h', 'h'],
+    minute: ['min', 'min'],
+    second: ['sec', 'sec']
   },
   'en': {
     words: {
@@ -52,13 +65,14 @@ languages = {
       'and': 'and',
       'inFuture': 'in'
     },
-    year: ['year', 'years', 'years'],
-    month: ['month', 'months', 'months'],
-    week: ['week', 'weeks', 'weeks'],
-    day: ['day', 'days', 'days'],
-    hour: ['hour', 'hours', 'hours'],
-    minute: ['minute', 'minutes', 'minutes'],
-    second: ['second', 'seconds', 'seconds']
+    mode: 1,
+    year: ['year', 'years'],
+    month: ['month', 'months'],
+    week: ['week', 'weeks'],
+    day: ['day', 'days'],
+    hour: ['hour', 'hours'],
+    minute: ['minute', 'minutes'],
+    second: ['second', 'seconds']
   },
   'de': {
     words: {
@@ -67,13 +81,14 @@ languages = {
       'and': 'und',
       'inFuture': 'in'
     },
-    year: ['Jahr', 'Jahren', 'Jahren'],
-    month: ['Monat', 'Monaten', 'Monaten'],
-    week: ['Woche', 'Wochen', 'Wochen'],
-    day: ['Tag', 'Tagen', 'Tagen'],
-    hour: ['Stunde', 'Stunden', 'Stunden'],
-    minute: ['Minute', 'Minuten', 'Minuten'],
-    second: ['Sekunde', 'Sekunden', 'Sekunden']
+    mode: 1,
+    year: ['Jahr', 'Jahren'],
+    month: ['Monat', 'Monaten'],
+    week: ['Woche', 'Wochen'],
+    day: ['Tag', 'Tagen'],
+    hour: ['Stunde', 'Stunden'],
+    minute: ['Minute', 'Minuten'],
+    second: ['Sekunde', 'Sekunden']
   },
   'it': {
     words: {
@@ -82,6 +97,7 @@ languages = {
       'and': 'e',
       'inFuture': 'in'
     },
+    mode: 1,
     year: ['anno', 'anni'],
     month: ['mese', 'mesi'],
     week: ['settimana', 'settimane'],
@@ -97,6 +113,7 @@ languages = {
       'and': 'y',
       'inFuture': 'en'
     },
+    mode: 1,
     year: ['a&#241;o', 'a&#241;os'],
     month: ['mes', 'meses'],
     week: ['semana', 'semanas'],
@@ -112,6 +129,7 @@ languages = {
       'and': 'et',
       'inFuture': 'en '
     },
+    mode: 1,
     year: ['an', 'ans'],
     month: ['mois', 'mois'],
     week: ['semaine', 'semaines'],
@@ -127,13 +145,14 @@ languages = {
       'and': 'e',
       'inFuture': 'em'
     },
+    mode: 1,
     year: ['ano', 'anos'],
     month: ['m&#234;s', 'meses'],
     week: ['semana', 'semanas'],
     day: ['dia', 'dias'],
     hour: ['hora', 'horas'],
     minute: ['minuto', 'minutos'],
-    second: ['segundo','segundos']
+    second: ['segundo', 'segundos']
   },
   'ru': {
     words: {
@@ -142,12 +161,13 @@ languages = {
       'and': 'и',
       'inFuture': 'через'
     },
-    year: ['год','года','лет'],
-    month: ['месяц','месяца','месяцев'],
-    week: ['неделя','неждели','недель'],
-    day: ['день','дня','дней'],
-    hour: ['час','часа','часов'],
-    minute: ['минута','минуты','минут'],
+    mode: 2,
+    year: ['год', 'года', 'лет'],
+    month: ['месяц', 'месяца', 'месяцев'],
+    week: ['неделя', 'неждели', 'недель'],
+    day: ['день', 'дня', 'дней'],
+    hour: ['час', 'часа', 'часов'],
+    minute: ['минута', 'минуты', 'минут'],
     second: ['секунду', 'секунды', 'секунд']
   }
 };

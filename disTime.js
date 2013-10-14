@@ -1,18 +1,19 @@
 /* * * * * * * * * *
  *   disTime .js   *
- *  Version 0.7.4  *
+ *  Version 0.7.5  *
  *  License:  MIT  *
  * Simon  Waldherr *
  * * * * * * * * * */
 
 /*jslint browser: true, indent: 2 */
+/*globals languages, checkForAnd */
 /*exported disTime */
 
 var disTimeRepeater, disTimeObject, disTime;
 disTimeObject = {
   parseTimestamp: function (language, thisTime, systemTime, detailed) {
     "use strict";
-    var insert, distime;
+    var insert, distime, years, month, weeks, days, hours, minute, second;
 
     function pInt(string) {
       return parseInt(string, 10);
@@ -31,21 +32,21 @@ disTimeObject = {
 
     if (distime > 31536000) {
       //years
-      var years = pInt(pInt(distime) / pInt(31536000));
-      insert += years + ' ' + languages.declOfNum(years, language.year);
+      years = pInt(pInt(distime) / pInt(31536000));
+      insert += years + ' ' + languages.declOfNum(language.mode, years, language.year);
     }
 
     if (((distime < 60 * 60 * 24 * 365) && (distime > 60 * 60 * 24 * 7 * 4)) || ((distime > 60 * 60 * 24 * 365) && detailed && (pInt(distime % 31536000 / 2419200) !== 0))) {
       //months
       insert += checkForAnd(detailed, insert, language);
-      var month = pInt(distime % 31536000 / 2419200);
-      insert += month + ' ' + languages.declOfNum(month, language.month);
+      month = pInt(distime % 31536000 / 2419200);
+      insert += month + ' ' + languages.declOfNum(language.mode, month, language.month);
 
       if (((distime < 60 * 60 * 24 * 365) && detailed && (pInt(distime % 2419200 / 86400) !== 0))) {
         //days
         insert += checkForAnd(detailed, insert, language);
-        var days = pInt(distime % 2419200 / 86400);
-        insert += days + ' ' + languages.declOfNum(days, language.day);
+        days = pInt(distime % 2419200 / 86400);
+        insert += days + ' ' + languages.declOfNum(language.mode, days, language.day);
       }
     }
 
@@ -53,42 +54,40 @@ disTimeObject = {
       //weeks
       insert += checkForAnd(detailed, insert, language);
 
-      var weeks = pInt(distime % 2419200 / 604800);
-      console.log('weeks:' + weeks);
-      insert += weeks + ' ' + languages.declOfNum(weeks, language.week);
+      weeks = pInt(distime % 2419200 / 604800);
+      insert += weeks + ' ' + languages.declOfNum(language.mode, weeks, language.week);
     }
 
     if (((distime < 60 * 60 * 24 * 7) && (distime > 86399)) || ((distime < 2419200) && (distime > 604799) && detailed && (pInt(distime % 604800 / 86400) !== 0))) {
       //days
       insert += checkForAnd(detailed, insert, language);
 
-      var days = pInt(distime % 2419200 / 86400);
-//    console.log('days:' + days);
-      insert += days + ' ' + languages.declOfNum(days, language.day);
+      days = pInt(distime % 2419200 / 86400);
+      insert += days + ' ' + languages.declOfNum(language.mode, days, language.day);
     }
 
     if (((distime < 86400) && (distime > 3599)) || ((distime < 604800) && (distime > 86399) && detailed && (pInt(distime % 86400 / 3600) !== 0))) {
       //hours
       insert += checkForAnd(detailed, insert, language);
 
-      var hours = pInt(distime % 86400 / 3600);
-      console.log('hours:' + hours);
-      insert += hours + ' ' + languages.declOfNum(hours, language.hour);
+      hours = pInt(distime % 86400 / 3600);
+      insert += hours + ' ' + languages.declOfNum(language.mode, hours, language.hour);
     }
 
     if (((distime < 3600) && (distime > 59)) || ((distime < 86400) && (distime > 3599) && detailed && (pInt(distime % 3600 / 60) !== 0))) {
       //minutes
       insert += checkForAnd(detailed, insert, language);
 
-      var minute = pInt(distime % 3600 / 60);
-      insert += minute + ' ' + languages.declOfNum(minute, language.minute);
+      minute = pInt(distime % 3600 / 60);
+      insert += minute + ' ' + languages.declOfNum(language.mode, minute, language.minute);
     }
 
     if ((distime < 60) || ((distime < 3600) && (distime > 59) && detailed && (distime % 60 !== 0))) {
       //seconds
       insert += checkForAnd(detailed, insert, language);
-      var second = distime % 60;
-      insert += second + ' ' + languages.declOfNum(second, language.second)
+
+      second = distime % 60;
+      insert += second + ' ' + languages.declOfNum(language.mode, second, language.second);
     }
 
     if (systemTime > thisTime) {

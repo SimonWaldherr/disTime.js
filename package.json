@@ -17,6 +17,10 @@
     {
       "name": "Tárcio Zemel",
       "url": "http://about.me/tarciozemel"
+    },
+    {
+      "name": "Roman Shvets",
+      "url": "https://github.com/pomaxa"
     }
   ],
   "demos": [
@@ -42,6 +46,7 @@
     "german",
     "french",
     "italian",
+    "russian",
     "portuguese",
     "spanish"
   ],
@@ -59,5 +64,5 @@
     "type": "git",
     "url": "https://github.com/shownotes/disTime.js.git"
   },
-  "version": "0.7.4"
+  "version": "0.7.5"
 }

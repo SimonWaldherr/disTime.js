@@ -17,7 +17,7 @@ module.exports = function(grunt) {
       options: {
         banner: '/* * * * * * * * * *\n' +
                 ' *   disTime .js   *\n' +
-                ' *  Version 0.7.4  *\n' +
+                ' *  Version 0.7.5  *\n' +
                 ' *  License:  MIT  *\n' +
                 ' * Simon  Waldherr *\n' +
                 ' * * * * * * * * * */\n\n',
@@ -25,7 +25,7 @@ module.exports = function(grunt) {
       },
       dist: {
         files: {
-          './disTime.min.js': ['./disTime.i18n.js', './disTime.js']
+          './disTime.min.js': ['./disTime.js', './disTime.i18n.js']
         }
       }
     },
