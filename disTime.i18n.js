@@ -1,6 +1,6 @@
 /* * * * * * * * * *
  *   disTime .js   *
- *  Version 0.7.5  *
+ *  Version 0.7.6  *
  *  License:  MIT  *
  * Simon  Waldherr *
  * * * * * * * * * */
@@ -89,6 +89,22 @@ var languages = {
     hour: ['Stunde', 'Stunden'],
     minute: ['Minute', 'Minuten'],
     second: ['Sekunde', 'Sekunden']
+  },
+  'nl': {
+    words: {
+      'preAgo': '',
+      'postAgo': 'geleden',
+      'and': 'en',
+      'inFuture': 'in'
+    },
+    mode: 1,
+    year: ['jaar', 'jaar'],
+    month: ['maand', 'maanden'],
+    week: ['week', 'weken'],
+    day: ['dag', 'dagen'],
+    hour: ['uur', 'uren'],
+    minute: ['minuut', 'minuten'],
+    second: ['seconde', 'seconden']
   },
   'it': {
     words: {
