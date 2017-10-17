@@ -37,7 +37,7 @@
   </script>
 </head>
 <body onload="javascript:init();">
-  <div id="config">Langauge (ISO 639-1):
+  <div id="config">Language (ISO 639-1):
     <select id="lang" name="lang" size="1" onchange="changeDemo()">
       <optgroup label="autodetected">
         <option><script>document.write((navigator.language) ? navigator.language : navigator.userLanguage);</script></option>
@@ -49,6 +49,8 @@
         <option>es</option>
         <option>fr</option>
         <option>pt</option>
+        <option>ru</option>
+        <option>uk</option>
       </optgroup>
     </select>
     Details:

@@ -130,10 +130,10 @@ var languages = {
       'inFuture': 'en'
     },
     mode: 1,
-    year: ['a&#241;o', 'a&#241;os'],
+    year: ['año', 'años'],
     month: ['mes', 'meses'],
     week: ['semana', 'semanas'],
-    day: ['d&#237;a ', 'd&#237;as'],
+    day: ['día ', 'días'],
     hour: ['hora', 'horas'],
     minute: ['minuto', 'minutos'],
     second: ['segundo', 'segundos']
@@ -143,7 +143,7 @@ var languages = {
       'preAgo': 'il ya',
       'postAgo': '',
       'and': 'et',
-      'inFuture': 'en '
+      'inFuture': 'dans '
     },
     mode: 1,
     year: ['an', 'ans'],
@@ -157,13 +157,13 @@ var languages = {
   'pt': {
     words: {
       'preAgo': '',
-      'postAgo': 'atr&#225;s',
+      'postAgo': 'atrás',
       'and': 'e',
       'inFuture': 'em'
     },
     mode: 1,
     year: ['ano', 'anos'],
-    month: ['m&#234;s', 'meses'],
+    month: ['mês', 'meses'],
     week: ['semana', 'semanas'],
     day: ['dia', 'dias'],
     hour: ['hora', 'horas'],
@@ -180,10 +180,26 @@ var languages = {
     mode: 2,
     year: ['год', 'года', 'лет'],
     month: ['месяц', 'месяца', 'месяцев'],
-    week: ['неделя', 'неждели', 'недель'],
+    week: ['неделя', 'недели', 'недель'],
     day: ['день', 'дня', 'дней'],
     hour: ['час', 'часа', 'часов'],
-    minute: ['минута', 'минуты', 'минут'],
+    minute: ['минуту', 'минуты', 'минут'],
     second: ['секунду', 'секунды', 'секунд']
+  },
+  'uk': {
+    words: {
+      'preAgo': '',
+      'postAgo': 'тому',
+      'and': '',
+      'inFuture': 'за'
+    },
+    mode: 2,
+    year: ['рік', 'роки', 'років'],
+    month: ['місяць', 'місяці', 'місяців'],
+    week: ['тиждень', 'тижня', 'тижнів'],
+    day: ['день', 'дні', 'днів'],
+    hour: ['годину', 'години', 'годин'],
+    minute: ['хвилину', 'хвилини', 'хвилин'],
+    second: ['секунду', 'секунди', 'секунд']
   }
 };
