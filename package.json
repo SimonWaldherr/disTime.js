@@ -21,6 +21,10 @@
     {
       "name": "Roman Shvets",
       "url": "https://github.com/pomaxa"
+    },
+    {
+      "name": "Andre Polykanine",
+      "url": "https://github.com/Oire"
     }
   ],
   "demos": [
@@ -49,6 +53,7 @@
     "russian",
     "portuguese",
     "dutch",
+    "ukrainian",
     "spanish"
   ],
   "license": "MIT",
@@ -65,5 +70,5 @@
     "type": "git",
     "url": "https://github.com/shownotes/disTime.js.git"
   },
-  "version": "0.7.6"
+  "version": "0.7.7"
 }
