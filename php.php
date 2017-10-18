@@ -49,6 +49,7 @@
         <option>es</option>
         <option>fr</option>
         <option>pt</option>
+        <option>no</option>
       </optgroup>
     </select>
     Details:

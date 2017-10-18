@@ -185,5 +185,21 @@ var languages = {
     hour: ['час', 'часа', 'часов'],
     minute: ['минута', 'минуты', 'минут'],
     second: ['секунду', 'секунды', 'секунд']
+  },
+  'no': {
+    words: {
+      'preAgo': '',
+      'postAgo': 'siden',
+      'and': 'og',
+      'inFuture': 'om'
+        },
+    mode: 1,
+    year: ['år', 'år'],
+    month: ['måned', 'måneder'],
+    week: ['uke', 'uker'],
+    day: ['dag', 'dager'],
+    hour: ['time', 'timer'],
+    minute: ['minutt', 'minutter'],
+    second: ['sekund', 'sekunder']
   }
 };
