@@ -201,5 +201,21 @@ var languages = {
     hour: ['годину', 'години', 'годин'],
     minute: ['хвилину', 'хвилини', 'хвилин'],
     second: ['секунду', 'секунди', 'секунд']
-  }
+  },
+  'pl': {
+    words: {
+      'preAgo': '',
+      'postAgo': 'temu',
+      'and': 'i',
+      'inFuture': 'za'
+    },
+    mode: 1,
+    year: ['rok', 'lata'],
+    month: ['miesiąc', 'miesiące'],
+    week: ['tydzień', 'tygodni'],
+    day: ['dzień', 'dni'],
+    hour: ['godzina', 'godziny'],
+    minute: ['minuta', 'minuty'],
+    second: ['sekunda', 'sekundy']
+  }  
 };
