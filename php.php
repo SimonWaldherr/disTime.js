@@ -48,6 +48,7 @@
         <option>it</option>
         <option>es</option>
         <option>fr</option>
+        <option>ms</option>
         <option>pt</option>
         <option>ru</option>
         <option>uk</option>
