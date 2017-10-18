@@ -54,6 +54,10 @@
     "portuguese",
     "dutch",
     "ukrainian",
+    "hindi",
+    "polish",
+    "malayan",
+    "norwegian",
     "spanish"
   ],
   "license": "MIT",
@@ -70,5 +74,5 @@
     "type": "git",
     "url": "https://github.com/shownotes/disTime.js.git"
   },
-  "version": "0.7.7"
+  "version": "0.7.8"
 }

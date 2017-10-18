@@ -53,6 +53,7 @@
         <option>ru</option>
         <option>uk</option>
         <option>no</option>
+        <option>in</option>
       </optgroup>
     </select>
     Details:
