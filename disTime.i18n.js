@@ -233,5 +233,21 @@ var languages = {
     hour: ['घंटा', 'घंटे'],
     minute: ['मिनट', 'मिनट'],
     second: ['सेकंड', 'सेकंड']
+  },
+  'no': {
+    words: {
+      'preAgo': '',
+      'postAgo': 'siden',
+      'and': 'og',
+      'inFuture': 'om'
+        },
+    mode: 1,
+    year: ['år', 'år'],
+    month: ['måned', 'måneder'],
+    week: ['uke', 'uker'],
+    day: ['dag', 'dager'],
+    hour: ['time', 'timer'],
+    minute: ['minutt', 'minutter'],
+    second: ['sekund', 'sekunder']
   }
 };
