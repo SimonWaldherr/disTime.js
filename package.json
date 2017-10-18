@@ -26,7 +26,7 @@
   "demos": [
     "./index.html"
   ],
-  "description": "converts UNIX-Timestamps to strings like '5 days ago' in six languages",
+  "description": "converts UNIX-Timestamps to strings like '5 days ago' in eight languages",
   "devDependencies": {
     "grunt": ">= 0.4.1",
     "grunt-compare-size": ">= 0.0.0",
@@ -48,6 +48,7 @@
     "italian",
     "russian",
     "portuguese",
+    "dutch",
     "spanish"
   ],
   "license": "MIT",
