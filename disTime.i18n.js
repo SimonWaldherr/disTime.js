@@ -271,7 +271,7 @@ var languages = {
       'preAgo': '',
       'postAgo': 'sedan',
       'and': 'och',
-      'inFuture': 'i'
+      'inFuture': 'om'
     },
     mode: 1,
     year: ['år', 'år'],
