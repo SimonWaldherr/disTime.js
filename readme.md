@@ -20,7 +20,7 @@ uk ([ISO 639-1 formatted](https://en.wikipedia.org/wiki/ISO_639-1).
 ## about
 
 License:   MIT  
-Version: 0.7.8  
+Version: 0.8.0  
 Date:  10.2017  
 
 ## demo

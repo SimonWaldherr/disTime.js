@@ -6,17 +6,17 @@
   },
   "bugs": {
     "email": "contact@simonwaldherr.de",
-    "url": "https://github.com/shownotes/disTime.js/issues"
+    "url": "https://github.com/SimonWaldherr/disTime.js/issues"
   },
   "contributors": [
     {
       "email": "contact@simonwaldherr.de",
       "name": "Simon Waldherr",
-      "url": "http://simon.waldherr.eu/"
+      "url": "https://simonwaldherr.de/"
     },
     {
       "name": "Tárcio Zemel",
-      "url": "http://about.me/tarciozemel"
+      "url": "https://about.me/tarciozemel"
     },
     {
       "name": "Roman Shvets",
@@ -25,6 +25,30 @@
     {
       "name": "Andre Polykanine",
       "url": "https://github.com/Oire"
+    },
+    {
+      "name": "Raphael",
+      "url": "https://github.com/raphaelz"
+    },
+    {
+      "name": "Bhaskar Machcha",
+      "url": "https://github.com/bhaskarmac"
+    },
+    {
+      "name": "Wulingoh",
+      "url": "https://github.com/Wulingoh"
+    },
+    {
+      "name": "Karl",
+      "url": "https://github.com/Weeper"
+    },
+    {
+      "name": "Mikael Forsgren",
+      "url": "https://github.com/mikaelf"
+    },
+    {
+      "name": "Abhishek Bhattacharya",
+      "url": "https://github.com/babhishek21"
     }
   ],
   "demos": [
@@ -38,7 +62,7 @@
     "grunt-contrib-uglify": ">= 0.2.2",
     "gzip-js": ">= 0.3.1"
   },
-  "homepage": "https://github.com/shownotes/disTime.js",
+  "homepage": "https://github.com/SimonWaldherr/disTime.js",
   "keywords": [
     "time",
     "date",
@@ -58,6 +82,7 @@
     "polish",
     "malayan",
     "norwegian",
+    "swedish",
     "spanish"
   ],
   "license": "MIT",
@@ -72,7 +97,7 @@
   "name": "distime",
   "repository": {
     "type": "git",
-    "url": "https://github.com/shownotes/disTime.js.git"
+    "url": "https://github.com/SimonWaldherr/disTime.js.git"
   },
-  "version": "0.7.8"
+  "version": "0.8.0"
 }
