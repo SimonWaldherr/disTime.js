@@ -265,5 +265,21 @@ var languages = {
     hour: ['godzina', 'godziny'],
     minute: ['minuta', 'minuty'],
     second: ['sekunda', 'sekundy']
-  }  
+  },
+  'sv': {
+    words: {
+      'preAgo': '',
+      'postAgo': 'sedan',
+      'and': 'och',
+      'inFuture': 'om'
+    },
+    mode: 1,
+    year: ['år', 'år'],
+    month: ['månad', 'månader'],
+    week: ['vecka', 'veckor'],
+    day: ['dag', 'dagar'],
+    hour: ['timme', 'timmar'],
+    minute: ['minut', 'minuter'],
+    second: ['sekund', 'sekunder']
+  } 
 };
