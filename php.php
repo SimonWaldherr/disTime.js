@@ -45,6 +45,7 @@
       <optgroup label="supported">
         <option>en</option>
         <option>de</option>
+        <option>id</option>
         <option>it</option>
         <option>es</option>
         <option>fr</option>

@@ -106,6 +106,22 @@ var languages = {
     minute: ['minuut', 'minuten'],
     second: ['seconde', 'seconden']
   },
+  'id': {
+    words: {
+      'preAgo': '',
+      'postAgo': 'yang lalu',
+      'and': 'dan',
+      'inFuture': 'dalam'
+    },
+    mode: 1,
+    year: ['tahun', 'tahun'],
+    month: ['bulan', 'bulan'],
+    week: ['minggu', 'minggu'],
+    day: ['hari', 'hari'],
+    hour: ['jam', 'jam'],
+    minute: ['menit', 'menit'],
+    second: ['detik', 'detik']
+  },
   'it': {
     words: {
       'preAgo': '',
