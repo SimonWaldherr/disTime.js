@@ -297,5 +297,21 @@ var languages = {
     hour: ['timme', 'timmar'],
     minute: ['minut', 'minuter'],
     second: ['sekund', 'sekunder']
-  } 
+  },
+  'tl': {
+    words: {
+      'preAgo': '',
+      'postAgo': 'ang nakalipas',
+      'and': 'at',
+      'inFuture': 'sa'
+    },
+    mode: 1,
+    year: ['taon', 'taon'],
+    month: ['buwan', 'buwan'],
+    week: ['linggo', 'linggo'],
+    day: ['araw', 'araw'],
+    hour: ['oras', 'oras'],
+    minute: ['minuto', 'minuto'],
+    second: ['segundo', 'segundo']
+  }
 };
