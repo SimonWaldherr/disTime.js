@@ -14,6 +14,7 @@ pl,
 pt, 
 ru, 
 sv,
+tl,
 uk ([ISO 639-1 formatted](https://en.wikipedia.org/wiki/ISO_639-1)).   
 *coders who like disTime.js maybe also like [parseTime.js](https://github.com/SimonWaldherr/parseTime.js)*  
 
