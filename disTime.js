@@ -92,6 +92,8 @@ disTimeObject = {
 
     if (systemTime > thisTime) {
       insert += ' ' + language.words.postAgo;
+    } else {
+      insert += ' ' + language.words.postInFuture;
     }
 
     return insert;

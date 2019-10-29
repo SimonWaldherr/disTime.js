@@ -56,6 +56,7 @@
         <option>no</option>
         <option>in</option>
         <option>tl</option>
+        <option>tr</option>
         <option>sv</option>
       </optgroup>
     </select>
