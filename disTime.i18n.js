@@ -195,6 +195,23 @@ var languages = {
     minute: ['minit', 'minit'],
     second: ['saat', 'saat']
   },
+  'oc': {
+    words: {
+      'preAgo': 'fa',
+      'postAgo': '',
+      'and': 'e',
+      'inFuture': 'd’aquí',
+      'postInFuture': ''
+    },
+    mode: 1,
+    year: ['an', 'ans'],
+    month: ['mes', 'meses'],
+    week: ['setmana', 'setmanas'],
+    day: ['jorn', 'jorns'],
+    hour: ['ora', 'oras'],
+    minute: ['minuta', 'minutas'],
+    second: ['segonda', 'segondas']
+  },  
   'pt': {
     words: {
       'preAgo': '',
