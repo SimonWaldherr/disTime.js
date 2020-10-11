@@ -54,6 +54,7 @@
         <option>ru</option>
         <option>uk</option>
         <option>no</option>
+        <option>oc</option>        
         <option>in</option>
         <option>tl</option>
         <option>tr</option>
