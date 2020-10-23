@@ -229,6 +229,23 @@ var languages = {
     minute: ['minuto', 'minutos'],
     second: ['segundo', 'segundos']
   },
+  'ro': {
+    words: {
+      'preAgo': 'acum',
+      'postAgo': '',
+      'and': 'si',
+      'inFuture': 'peste',
+      'postInFuture': ''
+    },
+    mode: 1,
+    year: ['an', 'ani'],
+    month: ['luna', 'luni'],
+    week: ['saptamana', 'saptamani'],
+    day: ['zi', 'zile'],
+    hour: ['ora', 'ore'],
+    minute: ['minut', 'minute'],
+    second: ['secunda', 'secunde']
+  },
   'ru': {
     words: {
       'preAgo': '',
