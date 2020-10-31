@@ -52,6 +52,7 @@
         <option>ms</option>
         <option>pt</option>
         <option>ro</option>
+        <option>ta</option>
         <option>ru</option>
         <option>uk</option>
         <option>no</option>

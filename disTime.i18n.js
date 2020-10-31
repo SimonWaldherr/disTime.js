@@ -246,6 +246,23 @@ var languages = {
     minute: ['minut', 'minute'],
     second: ['secunda', 'secunde']
   },
+  'ta': {
+    words: {
+      'preAgo': '',
+      'postAgo': 'முன்பு',
+      'and': 'மற்றும்',
+      'inFuture': 'இல்',
+      'postInFuture': ''
+    },
+    mode: 1,
+    year: ['ஆண்டு', 'ஆண்டுகள்'],
+    month: ['மாதம்', 'மாதங்கள்'],
+    week: ['வாரம்', 'வாரங்கள்'],
+    day: ['நாள்', 'நாட்கள்'],
+    hour: ['மணி', 'மணி'],
+    minute: ['நிமிடம்', 'நிமிடங்கள்'],
+    second: ['வினாடி', 'வினாடிகள்']
+  },
   'ru': {
     words: {
       'preAgo': '',
