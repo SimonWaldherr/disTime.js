@@ -17,7 +17,7 @@ module.exports = function(grunt) {
       options: {
         banner: '/* * * * * * * * * *\n' +
                 ' *   disTime .js   *\n' +
-                ' *  Version 0.8.0  *\n' +
+                ' *  Version 0.9.0  *\n' +
                 ' *  License:  MIT  *\n' +
                 ' * Simon  Waldherr *\n' +
                 ' * * * * * * * * * */\n\n',

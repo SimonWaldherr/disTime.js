@@ -1,6 +1,6 @@
 /* * * * * * * * * *
  *   disTime .js   *
- *  Version 0.8.0  *
+ *  Version 0.9.0  *
  *  License:  MIT  *
  * Simon  Waldherr *
  * * * * * * * * * */
