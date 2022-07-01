@@ -32,7 +32,7 @@ Date:  10.2020
 
 ## demo
 
-Test this code on the associated github page [simonwaldherr.github.com/disTime.js/](http://simonwaldherr.github.com/disTime.js/).
+Test this code on the associated github page [simonwaldherr.github.io/disTime.js/](https://simonwaldherr.github.io/disTime.js/).
 
 ## contact
 
