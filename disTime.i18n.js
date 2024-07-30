@@ -98,7 +98,7 @@ var languages = {
       'preAgo': '',
       'postAgo': 'geleden',
       'and': 'en',
-      'inFuture': 'in',
+      'inFuture': 'over',
       'postInFuture': ''
     },
     mode: 1,
