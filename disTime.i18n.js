@@ -156,7 +156,7 @@ var languages = {
     year: ['año', 'años'],
     month: ['mes', 'meses'],
     week: ['semana', 'semanas'],
-    day: ['día ', 'días'],
+    day: ['día', 'días'],
     hour: ['hora', 'horas'],
     minute: ['minuto', 'minutos'],
     second: ['segundo', 'segundos']
@@ -166,7 +166,7 @@ var languages = {
       'preAgo': 'il ya',
       'postAgo': '',
       'and': 'et',
-      'inFuture': 'dans ',
+      'inFuture': 'dans',
       'postInFuture': ''
     },
     mode: 1,
@@ -398,5 +398,175 @@ var languages = {
     hour: ['saat', 'saat'],
     minute: ['dakika', 'dakika'],
     second: ['saniye', 'saniye']
+  },
+  'ar': {
+    words: {
+      'preAgo': 'منذ',
+      'postAgo': '',
+      'and': 'و',
+      'inFuture': 'خلال',
+      'postInFuture': ''
+    },
+    mode: 1,
+    year: ['سنة', 'سنوات'],
+    month: ['شهر', 'أشهر'],
+    week: ['أسبوع', 'أسابيع'],
+    day: ['يوم', 'أيام'],
+    hour: ['ساعة', 'ساعات'],
+    minute: ['دقيقة', 'دقائق'],
+    second: ['ثانية', 'ثواني']
+  },
+  'bg': {
+    words: {
+      'preAgo': 'преди',
+      'postAgo': '',
+      'and': 'и',
+      'inFuture': 'след',
+      'postInFuture': ''
+    },
+    mode: 1,
+    year: ['година', 'години'],
+    month: ['месец', 'месеца'],
+    week: ['седмица', 'седмици'],
+    day: ['ден', 'дни'],
+    hour: ['час', 'часа'],
+    minute: ['минута', 'минути'],
+    second: ['секунда', 'секунди']
+  },
+  'ca': {
+    words: {
+      'preAgo': 'fa',
+      'postAgo': '',
+      'and': 'i',
+      'inFuture': 'd\'aquí',
+      'postInFuture': ''
+    },
+    mode: 1,
+    year: ['any', 'anys'],
+    month: ['mes', 'mesos'],
+    week: ['setmana', 'setmanes'],
+    day: ['dia', 'dies'],
+    hour: ['hora', 'hores'],
+    minute: ['minut', 'minuts'],
+    second: ['segon', 'segons']
+  },
+  'cs': {
+    words: {
+      'preAgo': 'před',
+      'postAgo': '',
+      'and': 'a',
+      'inFuture': 'za',
+      'postInFuture': ''
+    },
+    mode: 2,
+    year: ['rok', 'roky', 'let'],
+    month: ['měsíc', 'měsíce', 'měsíců'],
+    week: ['týden', 'týdny', 'týdnů'],
+    day: ['den', 'dny', 'dní'],
+    hour: ['hodina', 'hodiny', 'hodin'],
+    minute: ['minuta', 'minuty', 'minut'],
+    second: ['sekunda', 'sekundy', 'sekund']
+  },
+  'da': {
+    words: {
+      'preAgo': 'for',
+      'postAgo': 'siden',
+      'and': 'og',
+      'inFuture': 'om',
+      'postInFuture': ''
+    },
+    mode: 1,
+    year: ['år', 'år'],
+    month: ['måned', 'måneder'],
+    week: ['uge', 'uger'],
+    day: ['dag', 'dage'],
+    hour: ['time', 'timer'],
+    minute: ['minut', 'minutter'],
+    second: ['sekund', 'sekunder']
+  },
+  'el': {
+    words: {
+      'preAgo': '',
+      'postAgo': 'πριν',
+      'and': 'και',
+      'inFuture': 'σε',
+      'postInFuture': ''
+    },
+    mode: 1,
+    year: ['χρόνος', 'χρόνια'],
+    month: ['μήνας', 'μήνες'],
+    week: ['εβδομάδα', 'εβδομάδες'],
+    day: ['ημέρα', 'ημέρες'],
+    hour: ['ώρα', 'ώρες'],
+    minute: ['λεπτό', 'λεπτά'],
+    second: ['δευτερόλεπτο', 'δευτερόλεπτα']
+  },
+  'fi': {
+    words: {
+      'preAgo': '',
+      'postAgo': 'sitten',
+      'and': 'ja',
+      'inFuture': '',
+      'postInFuture': 'päästä'
+    },
+    mode: 1,
+    year: ['vuosi', 'vuotta'],
+    month: ['kuukausi', 'kuukautta'],
+    week: ['viikko', 'viikkoa'],
+    day: ['päivä', 'päivää'],
+    hour: ['tunti', 'tuntia'],
+    minute: ['minuutti', 'minuuttia'],
+    second: ['sekunti', 'sekuntia']
+  },
+  'ja': {
+    words: {
+      'preAgo': '',
+      'postAgo': '前',
+      'and': '',
+      'inFuture': '',
+      'postInFuture': '後'
+    },
+    mode: 1,
+    year: ['年', '年'],
+    month: ['ヶ月', 'ヶ月'],
+    week: ['週間', '週間'],
+    day: ['日', '日'],
+    hour: ['時間', '時間'],
+    minute: ['分', '分'],
+    second: ['秒', '秒']
+  },
+  'ko': {
+    words: {
+      'preAgo': '',
+      'postAgo': '전',
+      'and': ' ',
+      'inFuture': '',
+      'postInFuture': '후'
+    },
+    mode: 1,
+    year: ['년', '년'],
+    month: ['개월', '개월'],
+    week: ['주', '주'],
+    day: ['일', '일'],
+    hour: ['시간', '시간'],
+    minute: ['분', '분'],
+    second: ['초', '초']
+  },
+  'zh': {
+    words: {
+      'preAgo': '',
+      'postAgo': '前',
+      'and': '',
+      'inFuture': '',
+      'postInFuture': '后'
+    },
+    mode: 1,
+    year: ['年', '年'],
+    month: ['个月', '个月'],
+    week: ['周', '周'],
+    day: ['天', '天'],
+    hour: ['小时', '小时'],
+    minute: ['分钟', '分钟'],
+    second: ['秒', '秒']
   }
 };
